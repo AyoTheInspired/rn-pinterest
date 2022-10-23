@@ -1,4 +1,4 @@
-import { Image, StyleSheet } from "react-native";
+import { Image, ScrollView, StyleSheet } from "react-native";
 
 import EditScreenInfo from "../components/EditScreenInfo";
 import Pin from "../components/Pin";
@@ -9,12 +9,35 @@ export default function HomeScreen({
 	navigation,
 }: RootTabScreenProps<"TabOne">) {
 	return (
-		<View style={styles.container}>
-			<Pin
-				title="The title"
-				image="https://notjustdev-dummy.s3.us-east-2.amazonaws.com/pinterest/1.jpeg"
-			/>
-		</View>
+		<ScrollView>
+			<View style={styles.container}>
+				<Pin
+					pin={{
+						title: "The title",
+						image:
+							"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/pinterest/1.jpeg",
+					}}
+				/>
+			</View>
+			<View style={styles.container}>
+				<Pin
+					pin={{
+						title: "The title",
+						image:
+							"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/pinterest/0.jpeg",
+					}}
+				/>
+			</View>
+			<View style={styles.container}>
+				<Pin
+					pin={{
+						title: "The title",
+						image:
+							"https://notjustdev-dummy.s3.us-east-2.amazonaws.com/pinterest/2.jpeg",
+					}}
+				/>
+			</View>
+		</ScrollView>
 	);
 }
 
