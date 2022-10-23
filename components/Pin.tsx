@@ -47,6 +47,7 @@ export default Pin;
 const styles = StyleSheet.create({
 	pin: {
 		width: "100%",
+		padding: 5,
 	},
 
 	image: {
