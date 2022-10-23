@@ -26,6 +26,7 @@ import {
 	RootTabScreenProps,
 } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
+import PinScreen from "../screens/PinScreen";
 
 export default function Navigation({
 	colorScheme,
@@ -53,6 +54,11 @@ function RootNavigator() {
 			<Stack.Screen
 				name="Root"
 				component={BottomTabNavigator}
+				options={{ headerShown: false }}
+			/>
+			<Stack.Screen
+				name="Pin"
+				component={PinScreen}
 				options={{ headerShown: false }}
 			/>
 			<Stack.Screen
