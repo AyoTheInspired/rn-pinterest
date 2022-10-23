@@ -12,14 +12,14 @@ export default function HomeScreen({
 			<View style={styles.container}>
 				<View style={styles.column}>
 					{pins
-						.filter((item, index) => index % 2 === 0)
+						.filter((_, index) => index % 2 === 0)
 						.map((pin) => (
 							<Pin key={pin.id} pin={pin} />
 						))}
 				</View>
 				<View style={styles.column}>
 					{pins
-						.filter((item, index) => index % 2 === 1)
+						.filter((_, index) => index % 2 === 1)
 						.map((pin) => (
 							<Pin key={pin.id} pin={pin} />
 						))}
